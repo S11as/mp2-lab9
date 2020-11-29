@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 2.8) #Проверка версии CMake.
 
-set(PROJECT_NAME boilerplatelib) #Создаем обычную локальную переменную с именем проекта
+set(PROJECT_NAME queuelistlib) #Создаем обычную локальную переменную с именем проекта
 project(${PROJECT_NAME}) # Название проекта
 
-set(app boilerplate) #Переменная с именем приложения
-set(lib boilerplatelib) #Переменная с именем библиотеки
+set(app queuelist) #Переменная с именем приложения
+set(lib queuelistlib) #Переменная с именем библиотеки
 
 set(MP2_LIBRARY "${PROJECT_NAME}")
 set(MP2_TESTS   "test_${PROJECT_NAME}")
@@ -14,11 +14,11 @@ if(NOT CMAKE_BUILD_TYPE) # проверка имеющихся у компиля
     set(CMAKE_BUILD_TYPE Release) #Если нет то устанавливаем Release
 endif()
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/boilerplatelib) #Добавляем директорию "${CMAKE_CURRENT_SOURCE_DIR}/boilerplatelib" в дополняемые каталоги включаемых файлов
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/queuelistlib) #Добавляем директорию "${CMAKE_CURRENT_SOURCE_DIR}/queuelistlib" в дополняемые каталоги включаемых файлов
 #${CMAKE_CURRENT_SOURCE_DIR} - стандартная переменная с адресом рабочей директории
 
-add_subdirectory(boilerplate)
-add_subdirectory(boilerplatelib)
+add_subdirectory(queuelist)
+add_subdirectory(queuelistlib)
 
 add_subdirectory(gtest)
 add_subdirectory(test)
